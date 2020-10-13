@@ -23,7 +23,7 @@ export default new Router({
         }
 
         if (!getContactById(to.params.contactId)) {
-          next({path: '/404', replace: true}) //if contact is absent - redirect to 404 page
+          next({name: 'NotFoundPage', replace: true, params: {errorMessage: 'Такой контакт отсутствует'}}) //if contact is absent - redirect to 404 page
         } else {
           next()
         }
