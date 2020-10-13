@@ -42,5 +42,6 @@ export const CONTACT_FIELDS = [{
   type: 'text',
 }];
 export const MESSAGES = {
-  removeWarn: 'Точно хотите удалить?'
+  removeWarn: 'Точно хотите удалить?',
+  undoChangesWarning: 'Точно хотите отменить изменения?',
 };

@@ -1,6 +1,7 @@
 <template>
     <main class="contact-info-wrapper">
         <h1 class="text-ellipsis">{{currentContactInfo.contactName | capitalize}}</h1>
+        <UndoLastStateChangeBtnComponent :contactId="currentContactInfo.id"></UndoLastStateChangeBtnComponent>
         <div class="contact-info-fields">
             <form>
                 <ul>
@@ -25,12 +26,14 @@
     import {CONTACT_FIELDS} from "@/const";
     import ContactField from '../components/contact-info/ContactFieldComponent.vue'
     import AddNewContactFieldComponent from '../components/contact-info/AddNewContactFieldComponent.vue'
+    import UndoLastStateChangeBtnComponent from '../components/contact-info/UndoLastStateChangeBtnComponent.vue'
 
     export default {
         name: "ContactInfoPage",
         components:{
             ContactField,
             AddNewContactFieldComponent,
+            UndoLastStateChangeBtnComponent,
         },
         computed:{
             ...mapState({

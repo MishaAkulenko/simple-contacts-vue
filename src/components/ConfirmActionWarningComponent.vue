@@ -25,7 +25,8 @@
                 this.active = true;
             },
             confirm(){
-                this.$emit('confirm')
+                this.$emit('confirm');
+                this.active = false;
             },
             cancel(){
                 this.active = false;
@@ -48,6 +49,7 @@
             width: 100%;
             height: 100%;
             transform: none;
+            z-index: 11;
         }
         .warning-body {
             width: 100%;
