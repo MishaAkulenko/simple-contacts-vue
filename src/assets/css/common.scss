@@ -1,0 +1,96 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import 'fonts';
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  list-style: none;
+  box-sizing: border-box;
+  &:hover {
+    color: inherit;
+  }
+}
+div, a, li{
+  box-sizing: border-box;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+.flex, .visible-flex {
+  display: flex;
+}
+.flex-center  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-end  {
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+h1 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+.warning-message {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  text-align: center;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  @media (max-width: 768px) {
+    padding: 0 10px;
+  }
+}
+.material-icons {
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+}
+.text-ellipsis {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.btn {
+  cursor: pointer;
+  &.cancel-btn, &.remove-btn {
+    &:hover {
+      color: #e53e11;
+    }
+  }
+  &.confirm-btn {
+    &:hover {
+      color: green;
+    }
+  }
+}
